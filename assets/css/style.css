@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 20%, #2a1f3d, #0b0a12 70%);
+  color: #e9e4f5;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+main {
+  width: min(90vw, 520px);
+  padding: 2rem;
+  border: 1px solid #4b3a6b;
+  border-radius: 16px;
+  background: rgba(20, 16, 32, 0.8);
+  box-shadow: 0 0 40px rgba(150, 100, 255, 0.25);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+label,
+.label {
+  display: block;
+  margin: 1.25rem 0 0.4rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffb347;
+}
+
+textarea {
+  width: 100%;
+  min-height: 90px;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid #4b3a6b;
+  border-radius: 8px;
+  background: #0f0c1a;
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid #ffb347;
+  outline-offset: 2px;
+}
+
+#ghost {
+  min-height: 3rem;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #cfe8ff;
+  text-shadow:
+    0 0 8px #9ad0ff,
+    0 0 20px #6aa8ff;
+  animation: flicker 3s infinite;
+  overflow-wrap: anywhere;
+}
+
+#ghost span {
+  display: inline-block;
+  white-space: pre;
+  opacity: 0;
+  animation: materialise 0.6s ease-out forwards;
+}
+
+a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #ffb347;
+}
+
+@keyframes materialise {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.8);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  55% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1,
+  #ghost {
+    animation: none;
+  }
+  #ghost span {
+    animation-duration: 0.01s;
+    animation-delay: 0s !important;
+  }
+}
