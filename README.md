@@ -3,6 +3,8 @@
 A tiny JavaScript translator that turns ordinary words into "Ghost Talk" — a spooky Pig Latin variant.
 
 ![Preview](screenshot.png)
+[Live Preview](https://sparechange679.github.io/ghosty/)
+
 
 Description
 -----------
