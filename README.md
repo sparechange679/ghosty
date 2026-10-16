@@ -78,4 +78,4 @@ MIT License — feel free to reuse and adapt.
 
 Credits
 -------
-Created by sparechange679 — a fun CodePen challenge to make words a little spookier. 👻
+Created by [sparechange679](https://github.com/sparechange679) — a fun [CodePen challenge](https://codepen.io/challenges/2026/october) to make words a little spookier. 👻
